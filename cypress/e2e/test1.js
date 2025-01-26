@@ -1,6 +1,6 @@
-describe('My first test Suite', function(){
+describe('SignUp', function(){
 
-    it('My First Test Case', function(){
+    it('SignUp Testcase', function(){
 
         cy.visit('https://automationexercise.com/login');
 
@@ -9,7 +9,23 @@ describe('My first test Suite', function(){
         cy.get('[data-qa="signup-button"]').click()
 
         cy.get(':nth-child(3) > .top > [data-qa="title"]').click()
+        cy.get('[data-qa="password"]').type('123456')
+        cy.get('[data-qa="days"]').select('25')
+        cy.get('[data-qa="months"]').select('9')
+        cy.get('[data-qa="years"]').select('2001')
+
+        cy.get('[data-qa="first_name"]').type('Dexter')
+        cy.get('[data-qa="last_name"]').type('Morgan')
+        cy.get('[data-qa="address"]').type('Dhaka, Bangladesh')
+        cy.get('[data-qa="state"]').type('Dhaka')
+        cy.get('[data-qa="city"]').type('Dhaka')
+        cy.get('[data-qa="zipcode"]').type('1217')
+        cy.get('[data-qa="mobile_number"]').type('123456789')
+
+        cy.get('.nav > :nth-child(2) > a').click()
 
     })
 
 })
+
+
