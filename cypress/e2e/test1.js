@@ -1,11 +1,13 @@
+import 'cypress-file-upload';
+
 describe('SignUp', function(){
 
-    it('SignUp Testcase', function(){
+    it('SignUp Automation', function(){
 
         cy.visit('https://automationexercise.com/login');
 
         cy.get('[data-qa="signup-name"]').type('Dexter')
-        cy.get('[data-qa="signup-email"]').type('noobgamer201971@gmail.com')
+        cy.get('[data-qa="signup-email"]').type('gohideg876@maonyn.com')
         cy.get('[data-qa="signup-button"]').click()
 
         cy.get(':nth-child(3) > .top > [data-qa="title"]').click()
@@ -21,26 +23,25 @@ describe('SignUp', function(){
         cy.get('[data-qa="zipcode"]').type('1217')
         cy.get('[data-qa="mobile_number"]').type('123456789')
         cy.get('button[data-qa="create-account"]').click()
-        cy.get('[data-qa="continue-button"]').click()
-
-
 
     })
 
 })
 
 
-
-
-
-
-
 describe('All Jeans Product', function(){
 
     it('redirect to jeans section', function(){
 
+        // login
+        cy.visit('https://automationexercise.com/login');
+        cy.get('input[data-qa="login-email"]').type('gohideg876@maonyn.com')
+        cy.get('input[data-qa="login-password"]').type('123456')
+        cy.get('button[data-qa="login-button"]').click()
+        cy.wait(1000)
 
-        cy.visit('https://automationexercise.com/category_products/6');
+        //shop
+        cy.get('.shop-menu > .nav > :nth-child(2) > a').click()
         cy.get('i[class="fa fa-plus"]').eq(1).click()
         cy.get('#Men > .panel-body > ul > :nth-child(2) > a').click()
         cy.get(':nth-child(3) > .product-image-wrapper > .choose > .nav > li > a').click()
@@ -50,6 +51,19 @@ describe('All Jeans Product', function(){
         cy.wait(2000)
         cy.get('u').click()
         cy.get('.col-sm-6 > .btn').click()
+
+        cy.get('a[class="btn btn-default check_out"]').click()
+
+        cy.get('input[data-qa="name-on-card"]').type('Dexter')
+        cy.get('input[data-qa="card-number"]').type('5228090224456034')
+
+        cy.get('input[data-qa="cvc"]').type('878')
+        cy.get('input[data-qa="expiry-month"]').type('03')
+        cy.get('input[data-qa="expiry-year"]').type('2026')
+
+        cy.get("button[data-qa='pay-button']").click()
+
+        cy.get('.col-sm-9 > p').should('have.text', 'Congratulations! Your order has been confirmed!')
 
 
     })
@@ -64,10 +78,17 @@ describe('Product', function(){
 
         cy.visit('https://automationexercise.com/contact_us');
         cy.get('[data-qa="name"]').type('Dexter')
-        cy.get('[data-qa="email"]').type('noobgamer201971@gmail.com')
-        cy.get('[data-qa="subject"]').type('xyz')
-        cy.get('[data-qa="message"]').type('xyz')
+        cy.get('[data-qa="email"]').type('gohideg876@maonyn.com')
+        cy.get('[data-qa="subject"]').type('[Dummy Subject] Inquiry About Recent Clothing Purchase')
+        cy.get('[data-qa="message"]').type('[Dummy Message] I recently purchased a blue denim jacket from your store. My order ID is #12345. I received the item on 14th January, but I have a concern regarding the size being incorrect. Could you please assist me in resolving this? Let me know if you need any additional details. Looking forward to your response.')
+        cy.get('[name="upload_file"]').attachFile('example.json')
 
+        cy.get('[type="file"]').then(($input) => {
+
+            const files = $input[0].files;
+            expect(files[0].name).to.equal('example.json');
+
+        });
 
 
     })
