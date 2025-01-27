@@ -13,9 +13,6 @@
 - *[Visual Studio Code](https://code.visualstudio.com/)* as the IDE
 
 ## How to Run
-
-### Dependencies
-
 - Clone this project
 ```
 git clone https://github.com/sifatkamal/E-Commerce-Site-Automtation-Testing.git
