@@ -62,16 +62,6 @@ class Signup{
         return cy.get('[data-qa="create-account"]')
     }
 
-
-
-
-
-
-
-
-
-
-
 }
 
 export default Signup;
