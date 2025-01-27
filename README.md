@@ -2,40 +2,38 @@
 
 ## About this Project
 
-<p>In this project, I automated an e-commerce site with Cypress. It is a demo e-commerce site project for automation testing. Here I have tested SignUp, SignIn, Naviagate clothing categories, Added product to cart & checkout, and Contact feature.</p>
+<p>In this project, I automated an e-commerce site with Cypress. It is a demo e-commerce site project for automation testing. I have tested SignUp, SignIn, Navigate clothing categories, Added product to cart & checkout, and Contact feature.</p>
 
-## Tools & Technologies
-- Cypress
+## Languages and Frameworks
 
-## Prerequisites
-
-- Nodejs
-- npm
+- *[JavaScript]()* as the Programming Language
+- *[npm](https://www.npmjs.com/)* as package manager of Javascript
+- *[Nodejs](https://nodejs.org/)* as managing dependencies of Cypress
+- *[Cypress](https://www.cypress.io/)* as the web automation framework
+- *[Visual Studio Code](https://code.visualstudio.com/)* as the IDE
 
 ## How to Run
 
 ### Dependencies
 
 - Clone this project
-``git clone https://github.com/sifatkamal/E-Commerce-Site-Automtation-Testing.git``
+```
+git clone https://github.com/sifatkamal/E-Commerce-Site-Automtation-Testing.git
+```
 
-- Download and install NodeJs
+- Download and install [Node.js](https://nodejs.org/en/download)
 
-https://nodejs.org/en/download
+- Install npm
 
-- install npm
-
-``npm install``
+```
+npm install
+```
 
 - Run Project
 
-``npm run cypress:open``
-
-### Project Setup in Cypess GUI
-
-- Choose e2e
-- Pick prefered Browser
-- Run test.js file
+```
+npm run cypress:open
+```
 
 ## Website URL
 - https://automationexercise.com/login
