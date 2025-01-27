@@ -8,7 +8,7 @@
 
 - *[JavaScript]()* as the Programming Language
 - *[npm](https://www.npmjs.com/)* as package manager of Javascript
-- *[Nodejs](https://nodejs.org/)* as managing dependencies of Cypress
+- *[Node.js](https://nodejs.org/)* as managing dependencies of Cypress
 - *[Cypress](https://www.cypress.io/)* as the web automation framework
 - *[Visual Studio Code](https://code.visualstudio.com/)* as the IDE
 
