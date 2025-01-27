@@ -17,7 +17,7 @@
 ### Dependencies
 
 - Clone this project
-```git clone https://github.com/sifatkamal/E-Commerce-Site-Automtation-Testing.git```
+``git clone https://github.com/sifatkamal/E-Commerce-Site-Automtation-Testing.git``
 
 - Download and install NodeJs
 
@@ -25,11 +25,11 @@ https://nodejs.org/en/download
 
 - install npm
 
-```npm install```
+``npm install``
 
 - Run Project
 
-```npm run cypress:open```
+``npm run cypress:open``
 
 ### Project Setup in Cypess GUI
 
