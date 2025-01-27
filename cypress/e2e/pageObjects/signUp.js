@@ -1,29 +1,77 @@
-// class Signup{
+class Signup{
 
-//     getName(){
+    getName(){
+        return cy.get('[data-qa="signup-name"]')
+    }
 
-//         return cy.get('[data-qa="signup-name"]')
+    getEmail(){
+        return cy.get('[data-qa="signup-email"]')
+    }
 
-//     }
+    tapSignup(){
+        return cy.get('[data-qa="signup-button"]')
+    }
 
-//     getEmail(){
+    genderMale(){
+        return cy.get(':nth-child(3) > .top > [data-qa="title"]')
+    }
 
-//         return cy.get('[data-qa="signup-email"]')
+    getPass(){
+        return cy.get('[data-qa="password"]')
+    }
 
-//     }
+    getBirthdate(){
+        return cy.get('[data-qa="days"]')
+    }
 
-//     tapSignup(){
+    getBirthmonth(){
+        return cy.get('[data-qa="months"]')
+    }
 
-//         return cy.get('[data-qa="signup-button"]')
+    getBirthyear(){
+        return cy.get('[data-qa="years"]')
+    }
 
-//     }
+    getFirstName(){
+        return cy.get('[data-qa="first_name"]')
+    }
+    getLastName(){
+        return cy.get('[data-qa="last_name"]')
+    }
+    getAddress(){
+        return cy.get('[data-qa="address"]')
+    }
 
-//     genderMale(){
-//         return cy.get(':nth-child(3) > .top > [data-qa="title"]')
-//     }
+    getCountry(){
+        return cy.get('[data-qa="country"]')
+    }
+
+    getState(){
+        return cy.get('[data-qa="state"]')
+    }
+    getCity(){
+        return cy.get('[data-qa="city"]')
+    }
+    getZipcode(){
+        return cy.get('[data-qa="zipcode"]')
+    }
+    getPhoneNo(){
+        return cy.get('[data-qa="mobile_number"]')
+    }
+    getcreateAcc(){
+        return cy.get('[data-qa="create-account"]')
+    }
 
 
 
-// }
 
-// export default Signup;
+
+
+
+
+
+
+
+}
+
+export default Signup;
